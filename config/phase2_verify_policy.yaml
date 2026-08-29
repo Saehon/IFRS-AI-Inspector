@@ -1,0 +1,57 @@
+phase: 2
+name: Verify & Evidence
+version: 1.0.0
+purpose: >-
+  Prevent unsupported, uncited, or materially risky AI/agent outputs from
+  flowing into downstream accounting, audit, forensic, PCAOB, IFRS, or
+  sustainability workflows.
+
+thresholds:
+  min_evidence_coverage: 0.80
+  min_citation_coverage: 0.80
+  max_unsupported_claim_rate: 0.20
+
+statuses:
+  PASS:
+    action: allow_downstream
+    human_gate: false
+  REVIEW:
+    action: hold_for_review
+    human_gate: true
+  BLOCK:
+    action: block_downstream
+    human_gate: true
+
+mandatory_controls:
+  - evidence_id
+  - source_uri
+  - source_type
+  - evidence_hash_sha256
+  - claim_to_evidence_link
+  - citation_presence
+  - unsupported_claim_detection
+  - materiality_risk_flag
+  - hallucination_risk_flag
+  - exception_log
+  - human_gate
+  - immutable_verification_report
+
+high_risk_triggers:
+  - material misstatement
+  - fraud allegation
+  - regulatory violation
+  - control deficiency
+  - restatement
+  - going concern
+  - IFRS non-compliance
+  - PCAOB inspection conclusion
+  - ISA non-compliance
+  - quantitative assertion without evidence
+
+principles:
+  model_neutral: true
+  evidence_first: true
+  no_autonomous_material_conclusion: true
+  no_downstream_on_block: true
+  provenance_required: true
+  human_override_logged: true
