@@ -1,0 +1,55 @@
+schema_version: "1.0"
+name: IFRS-AI-Inspector
+version: "0.1.0"
+type: agent
+domain: financial-reporting
+subdomains:
+  - IFRS
+  - audit-assurance
+  - sustainability-reporting
+repository: Saehon/IFRS-AI-Inspector
+entrypoint: src/agent_orchestrator.py
+capabilities:
+  - IFRS-compliance-analysis
+  - evidence-grounded-assurance
+  - digital-twin-analysis
+  - RAG
+  - deterministic-validation
+inputs:
+  - annual-report
+  - xbrl
+  - ledger-data
+  - evidence-pack
+outputs:
+  - findings
+  - evidence-map
+  - compliance-assessment
+  - confidence
+knowledge:
+  authoritative_sources:
+    - IFRS
+    - IAS
+    - ISA
+    - ISSB
+    - ESRS
+    - COSO
+  core: knowledge-core
+governance:
+  risk_level: high
+  human_review: required
+  evidence_required: true
+  immutable_run_manifest: required
+  production_gate:
+    - schema-validation
+    - benchmark
+    - blind-gold
+    - red-team
+    - risk-review
+    - human-approval
+evaluation:
+  benchmark: IFRS-Eval
+  golden_set: IFRS-Gold
+license:
+  - MIT
+  - Apache-2.0
+status: registered
