@@ -1,11 +1,22 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "If you use this software or research framework, please cite it as below."
 authors:
-- family-names: "Homayoun"
-  given-names: "Saeid"
-  affiliation: "University of Gävle, Sweden"
-  orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Homayoun"
+    given-names: "Saeid"
+    affiliation: "University of Gävle, Sweden"
+    orcid: "https://orcid.org/0000-0002-2536-0446"
 title: "IFRS-AI Inspector: A Hybrid Multi-Agent Digital Twin Framework for Autonomous Continuous IFRS Assurance"
 version: 1.0.0
 date-released: 2026-07-31
+type: software
+repository-code: "https://github.com/Saehon/IFRS-AI-Inspector"
 url: "https://github.com/Saehon/IFRS-AI-Inspector"
+license: "MIT OR Apache-2.0"
+keywords:
+  - accounting
+  - auditing
+  - IFRS
+  - multi-agent systems
+  - digital twins
+  - assurance
+  - artificial intelligence
