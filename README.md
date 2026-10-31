@@ -7,6 +7,8 @@
 [![Citation](https://img.shields.io/badge/cite-CITATION.cff-blue)](./CITATION.cff)
 [![Portfolio](https://img.shields.io/badge/NAAIL-OpenLab-6b7280)](https://github.com/Saehon/Saeid-Homayoun)
 
+**Executable evidence-provenance research:** [Evidence Passport metadata validator](research_tools/README.md) — synthetic inventory example, fail-closed human review, source hashes, reporting-date checks and automated tests. No professional audit opinion or IFRS compliance is asserted.
+
 **Research evaluation protocol:** [Financial evidence, IFRS judgment, agent traces and reviewer gates](RESEARCH_EVALUATION_CARD.md) — aligned to published OpenAI, Anthropic, Google and Inspect methodologies; **not a claim of independent model testing**.
 
 **Principal investigator:** Saeid Homayoun  
