@@ -3,9 +3,11 @@
 **Standards-aware multi-agent digital-twin research for verifiable financial reporting and assurance.**
 
 [![Research status](https://img.shields.io/badge/status-research%20prototype-555555)](#maturity-and-use-boundary)
-[![Human review](https://img.shields.io/badge/human%20review-required-2f855a)](#governance-and-assurance-boundary)
+[![Human review](https://img.shields.io/badge/human%20review-required-2f855a)](#maturity-and-use-boundary)
 [![Citation](https://img.shields.io/badge/cite-CITATION.cff-blue)](./CITATION.cff)
 [![Portfolio](https://img.shields.io/badge/NAAIL-OpenLab-6b7280)](https://github.com/Saehon/Saeid-Homayoun)
+
+**Research evaluation protocol:** [Financial evidence, IFRS judgment, agent traces and reviewer gates](RESEARCH_EVALUATION_CARD.md) — aligned to published OpenAI, Anthropic, Google and Inspect methodologies; **not a claim of independent model testing**.
 
 **Principal investigator:** Saeid Homayoun  
 **ORCID:** https://orcid.org/0000-0002-2536-0446  
