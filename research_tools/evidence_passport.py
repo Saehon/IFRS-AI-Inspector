@@ -114,7 +114,7 @@ def validate(packet, root):
     if conflicts:
         issues.append("CONTRADICTORY_EVIDENCE_REQUIRES_REVIEW")
     reviewer = packet.get("reviewer")
-    if reviewer is None or reviewer.get("decision") != "approve":
+    if not isinstance(reviewer, dict) or reviewer.get("decision") != "approve":
         issues.append("NO_DECLARED_HUMAN_APPROVAL")
     else:
         reviewed_by = text(reviewer, "reviewed_by")
