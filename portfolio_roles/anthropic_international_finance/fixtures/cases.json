@@ -1,0 +1,222 @@
+[
+  {
+    "id": "ready_original",
+    "category": "valid_control",
+    "expected_blocked": false,
+    "input": {
+      "entity_id": "SYN-ENTITY",
+      "country": "Ireland",
+      "program_owner": "finance_pm",
+      "launch_date": "2026-12-01",
+      "risk_register_id": "SYN-RISK",
+      "workstream_signoffs": {
+        "accounting": true,
+        "tax": true,
+        "treasury": true,
+        "payroll": true,
+        "finance_systems": true,
+        "legal": true
+      },
+      "critical_dependency_open": false,
+      "human_final_approval": false
+    }
+  },
+  {
+    "id": "ready_repeat",
+    "category": "repeatability",
+    "expected_blocked": false,
+    "input": {
+      "entity_id": "SYN-ENTITY",
+      "country": "Ireland",
+      "program_owner": "finance_pm",
+      "launch_date": "2026-12-01",
+      "risk_register_id": "SYN-RISK",
+      "workstream_signoffs": {
+        "accounting": true,
+        "tax": true,
+        "treasury": true,
+        "payroll": true,
+        "finance_systems": true,
+        "legal": true
+      },
+      "critical_dependency_open": false,
+      "human_final_approval": false
+    }
+  },
+  {
+    "id": "tax_unsigned",
+    "category": "tax_unsigned",
+    "expected_blocked": true,
+    "input": {
+      "entity_id": "SYN-ENTITY",
+      "country": "Ireland",
+      "program_owner": "finance_pm",
+      "launch_date": "2026-12-01",
+      "risk_register_id": "SYN-RISK",
+      "workstream_signoffs": {
+        "accounting": true,
+        "tax": false,
+        "treasury": true,
+        "payroll": true,
+        "finance_systems": true,
+        "legal": true
+      },
+      "critical_dependency_open": false,
+      "human_final_approval": false
+    }
+  },
+  {
+    "id": "dependency_open",
+    "category": "dependency_open",
+    "expected_blocked": true,
+    "input": {
+      "entity_id": "SYN-ENTITY",
+      "country": "Ireland",
+      "program_owner": "finance_pm",
+      "launch_date": "2026-12-01",
+      "risk_register_id": "SYN-RISK",
+      "workstream_signoffs": {
+        "accounting": true,
+        "tax": true,
+        "treasury": true,
+        "payroll": true,
+        "finance_systems": true,
+        "legal": true
+      },
+      "critical_dependency_open": true,
+      "human_final_approval": false
+    }
+  },
+  {
+    "id": "no_risk_registry",
+    "category": "no_risk_registry",
+    "expected_blocked": true,
+    "input": {
+      "entity_id": "SYN-ENTITY",
+      "country": "Ireland",
+      "program_owner": "finance_pm",
+      "launch_date": "2026-12-01",
+      "risk_register_id": "",
+      "workstream_signoffs": {
+        "accounting": true,
+        "tax": true,
+        "treasury": true,
+        "payroll": true,
+        "finance_systems": true,
+        "legal": true
+      },
+      "critical_dependency_open": false,
+      "human_final_approval": false
+    }
+  },
+  {
+    "id": "missing_entity",
+    "category": "missing_entity",
+    "expected_blocked": true,
+    "input": {
+      "entity_id": "",
+      "country": "Ireland",
+      "program_owner": "finance_pm",
+      "launch_date": "2026-12-01",
+      "risk_register_id": "SYN-RISK",
+      "workstream_signoffs": {
+        "accounting": true,
+        "tax": true,
+        "treasury": true,
+        "payroll": true,
+        "finance_systems": true,
+        "legal": true
+      },
+      "critical_dependency_open": false,
+      "human_final_approval": false
+    }
+  },
+  {
+    "id": "premature_signoff",
+    "category": "premature_signoff",
+    "expected_blocked": true,
+    "input": {
+      "entity_id": "SYN-ENTITY",
+      "country": "Ireland",
+      "program_owner": "finance_pm",
+      "launch_date": "2026-12-01",
+      "risk_register_id": "SYN-RISK",
+      "workstream_signoffs": {
+        "accounting": true,
+        "tax": true,
+        "treasury": true,
+        "payroll": true,
+        "finance_systems": true,
+        "legal": true
+      },
+      "critical_dependency_open": false,
+      "human_final_approval": true
+    }
+  },
+  {
+    "id": "no_payroll",
+    "category": "no_payroll",
+    "expected_blocked": true,
+    "input": {
+      "entity_id": "SYN-ENTITY",
+      "country": "Ireland",
+      "program_owner": "finance_pm",
+      "launch_date": "2026-12-01",
+      "risk_register_id": "SYN-RISK",
+      "workstream_signoffs": {
+        "accounting": true,
+        "tax": true,
+        "treasury": true,
+        "payroll": false,
+        "finance_systems": true,
+        "legal": true
+      },
+      "critical_dependency_open": false,
+      "human_final_approval": false
+    }
+  },
+  {
+    "id": "missing_country",
+    "category": "missing_country",
+    "expected_blocked": true,
+    "input": {
+      "entity_id": "SYN-ENTITY",
+      "country": "",
+      "program_owner": "finance_pm",
+      "launch_date": "2026-12-01",
+      "risk_register_id": "SYN-RISK",
+      "workstream_signoffs": {
+        "accounting": true,
+        "tax": true,
+        "treasury": true,
+        "payroll": true,
+        "finance_systems": true,
+        "legal": true
+      },
+      "critical_dependency_open": false,
+      "human_final_approval": false
+    }
+  },
+  {
+    "id": "missing_program_owner",
+    "category": "missing_program_owner",
+    "expected_blocked": true,
+    "input": {
+      "entity_id": "SYN-ENTITY",
+      "country": "Ireland",
+      "program_owner": "",
+      "launch_date": "2026-12-01",
+      "risk_register_id": "SYN-RISK",
+      "workstream_signoffs": {
+        "accounting": true,
+        "tax": true,
+        "treasury": true,
+        "payroll": true,
+        "finance_systems": true,
+        "legal": true
+      },
+      "critical_dependency_open": false,
+      "human_final_approval": false
+    }
+  }
+]
