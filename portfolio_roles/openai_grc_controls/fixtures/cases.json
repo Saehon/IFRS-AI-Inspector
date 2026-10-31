@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ready_original",
+    "category": "valid_control",
+    "expected_blocked": false,
+    "input": {
+      "control_id": "SYN-ACCESS-01",
+      "framework": "synthetic-framework",
+      "environment": "sandbox",
+      "owner": "alice",
+      "reviewer": "bob",
+      "evidence": {
+        "source_id": "SYN-EV",
+        "captured_at": "2026-10-01T00:00:00Z",
+        "payload": "synthetic event",
+        "sha256": "9d8cadb9a7420b450f95a52ea0b5b874d04f19eb2c7f1cf35ab7e0205ebcc988",
+        "control_id": "SYN-ACCESS-01",
+        "test_result": "pass"
+      }
+    }
+  },
+  {
+    "id": "ready_repeat",
+    "category": "repeatability",
+    "expected_blocked": false,
+    "input": {
+      "control_id": "SYN-ACCESS-01",
+      "framework": "synthetic-framework",
+      "environment": "sandbox",
+      "owner": "alice",
+      "reviewer": "bob",
+      "evidence": {
+        "source_id": "SYN-EV",
+        "captured_at": "2026-10-01T00:00:00Z",
+        "payload": "synthetic event",
+        "sha256": "9d8cadb9a7420b450f95a52ea0b5b874d04f19eb2c7f1cf35ab7e0205ebcc988",
+        "control_id": "SYN-ACCESS-01",
+        "test_result": "pass"
+      }
+    }
+  },
+  {
+    "id": "tampered_payload",
+    "category": "tampered_payload",
+    "expected_blocked": true,
+    "input": {
+      "control_id": "SYN-ACCESS-01",
+      "framework": "synthetic-framework",
+      "environment": "sandbox",
+      "owner": "alice",
+      "reviewer": "bob",
+      "evidence": {
+        "source_id": "SYN-EV",
+        "captured_at": "2026-10-01T00:00:00Z",
+        "payload": "tampered",
+        "sha256": "9d8cadb9a7420b450f95a52ea0b5b874d04f19eb2c7f1cf35ab7e0205ebcc988",
+        "control_id": "SYN-ACCESS-01",
+        "test_result": "pass"
+      }
+    }
+  },
+  {
+    "id": "scope_mismatch",
+    "category": "scope_mismatch",
+    "expected_blocked": true,
+    "input": {
+      "control_id": "SYN-ACCESS-01",
+      "framework": "synthetic-framework",
+      "environment": "sandbox",
+      "owner": "alice",
+      "reviewer": "bob",
+      "evidence": {
+        "source_id": "SYN-EV",
+        "captured_at": "2026-10-01T00:00:00Z",
+        "payload": "synthetic event",
+        "sha256": "9d8cadb9a7420b450f95a52ea0b5b874d04f19eb2c7f1cf35ab7e0205ebcc988",
+        "control_id": "NOT-THIS-CONTROL",
+        "test_result": "pass"
+      }
+    }
+  },
+  {
+    "id": "missing_owner",
+    "category": "missing_owner",
+    "expected_blocked": true,
+    "input": {
+      "control_id": "SYN-ACCESS-01",
+      "framework": "synthetic-framework",
+      "environment": "sandbox",
+      "owner": "",
+      "reviewer": "bob",
+      "evidence": {
+        "source_id": "SYN-EV",
+        "captured_at": "2026-10-01T00:00:00Z",
+        "payload": "synthetic event",
+        "sha256": "9d8cadb9a7420b450f95a52ea0b5b874d04f19eb2c7f1cf35ab7e0205ebcc988",
+        "control_id": "SYN-ACCESS-01",
+        "test_result": "pass"
+      }
+    }
+  },
+  {
+    "id": "conflicted_reviewer",
+    "category": "conflicted_reviewer",
+    "expected_blocked": true,
+    "input": {
+      "control_id": "SYN-ACCESS-01",
+      "framework": "synthetic-framework",
+      "environment": "sandbox",
+      "owner": "alice",
+      "reviewer": "alice",
+      "evidence": {
+        "source_id": "SYN-EV",
+        "captured_at": "2026-10-01T00:00:00Z",
+        "payload": "synthetic event",
+        "sha256": "9d8cadb9a7420b450f95a52ea0b5b874d04f19eb2c7f1cf35ab7e0205ebcc988",
+        "control_id": "SYN-ACCESS-01",
+        "test_result": "pass"
+      }
+    }
+  },
+  {
+    "id": "missing_timestamp",
+    "category": "missing_timestamp",
+    "expected_blocked": true,
+    "input": {
+      "control_id": "SYN-ACCESS-01",
+      "framework": "synthetic-framework",
+      "environment": "sandbox",
+      "owner": "alice",
+      "reviewer": "bob",
+      "evidence": {
+        "source_id": "SYN-EV",
+        "captured_at": "",
+        "payload": "synthetic event",
+        "sha256": "9d8cadb9a7420b450f95a52ea0b5b874d04f19eb2c7f1cf35ab7e0205ebcc988",
+        "control_id": "SYN-ACCESS-01",
+        "test_result": "pass"
+      }
+    }
+  },
+  {
+    "id": "failed_test",
+    "category": "failed_test",
+    "expected_blocked": true,
+    "input": {
+      "control_id": "SYN-ACCESS-01",
+      "framework": "synthetic-framework",
+      "environment": "sandbox",
+      "owner": "alice",
+      "reviewer": "bob",
+      "evidence": {
+        "source_id": "SYN-EV",
+        "captured_at": "2026-10-01T00:00:00Z",
+        "payload": "synthetic event",
+        "sha256": "9d8cadb9a7420b450f95a52ea0b5b874d04f19eb2c7f1cf35ab7e0205ebcc988",
+        "control_id": "SYN-ACCESS-01",
+        "test_result": "fail"
+      }
+    }
+  },
+  {
+    "id": "missing_evidence",
+    "category": "missing_evidence",
+    "expected_blocked": true,
+    "input": {
+      "control_id": "SYN-ACCESS-01",
+      "framework": "synthetic-framework",
+      "environment": "sandbox",
+      "owner": "alice",
+      "reviewer": "bob",
+      "evidence": {
+        "source_id": "",
+        "captured_at": "2026-10-01T00:00:00Z",
+        "payload": "synthetic event",
+        "sha256": "9d8cadb9a7420b450f95a52ea0b5b874d04f19eb2c7f1cf35ab7e0205ebcc988",
+        "control_id": "SYN-ACCESS-01",
+        "test_result": "pass"
+      }
+    }
+  },
+  {
+    "id": "missing_framework",
+    "category": "missing_framework",
+    "expected_blocked": true,
+    "input": {
+      "control_id": "SYN-ACCESS-01",
+      "framework": "",
+      "environment": "sandbox",
+      "owner": "alice",
+      "reviewer": "bob",
+      "evidence": {
+        "source_id": "SYN-EV",
+        "captured_at": "2026-10-01T00:00:00Z",
+        "payload": "synthetic event",
+        "sha256": "9d8cadb9a7420b450f95a52ea0b5b874d04f19eb2c7f1cf35ab7e0205ebcc988",
+        "control_id": "SYN-ACCESS-01",
+        "test_result": "pass"
+      }
+    }
+  }
+]
