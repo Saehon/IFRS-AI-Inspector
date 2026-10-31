@@ -1,0 +1,36 @@
+name: Evidence Passport Scientific Integrity
+on:
+  pull_request:
+    paths:
+      - 'research_tools/**'
+      - '.github/workflows/evidence-passport-integrity.yml'
+  push:
+    branches: ['research/**']
+    paths:
+      - 'research_tools/**'
+      - '.github/workflows/evidence-passport-integrity.yml'
+permissions:
+  contents: read
+jobs:
+  evidence-passport-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile offline scientific code
+        run: python -m compileall -q research_tools
+      - name: Verify accounting evidence metadata gates
+        run: python -m unittest discover -s research_tools/tests -p 'test_*.py' -v
+      - name: Reproduce blocked synthetic evidence packet
+        run: |
+          python -m research_tools.evidence_passport --out reports/evidence_passport_synthetic.json
+          python -c 'import json; d=json.load(open("reports/evidence_passport_synthetic.json")); assert d["gate"] == "BLOCKED"; assert d["audit_opinion_issued"] is False and d["ifrs_compliance_certified"] is False'
+      - name: Publish the synthetic evidence audit receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidence-passport-synthetic-validation
+          path: reports/evidence_passport_synthetic.json
+          retention-days: 30
+          if-no-files-found: error
