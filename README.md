@@ -3,7 +3,7 @@
 **Standards-aware multi-agent digital-twin research for verifiable financial reporting and assurance.**
 
 [![Research status](https://img.shields.io/badge/status-research%20prototype-555555)](#maturity-and-use-boundary)
-[![Human review](https://img.shields.io/badge/human%20review-required-2f855a)](#governance-and-assurance-boundary)
+[![Human review](https://img.shields.io/badge/human%20review-required-2f855a)](#maturity-and-use-boundary)
 [![Citation](https://img.shields.io/badge/cite-CITATION.cff-blue)](./CITATION.cff)
 [![Portfolio](https://img.shields.io/badge/NAAIL-OpenLab-6b7280)](https://github.com/Saehon/Saeid-Homayoun)
 
@@ -11,6 +11,20 @@
 **ORCID:** https://orcid.org/0000-0002-2536-0446  
 **Research portfolio:** NAAIL OpenLab  
 **Status:** Public research prototype · pre-production · human-review-required
+
+## Quick start for technical reviewers and hiring teams
+
+This repository is a standards-aware *research prototype*, not a certified financial-reporting or compliance system. To inspect independently authored, reproducible contributions, begin with:
+
+| Capability | Inspect | What is and is not established |
+|---|---|---|
+| Evidence-aware audit control testing | [GRC / Controls code review PR #3](https://github.com/Saehon/IFRS-AI-Inspector/pull/3) | Synthetic Python tests and provenance checks; no real SOX/SOC 2 assurance |
+| International finance workflow readiness | [Finance program-management PR #4](https://github.com/Saehon/IFRS-AI-Inspector/pull/4) | Synthetic dependency and signoff checks only; no implemented country deployment |
+| Research architecture and limitations | [NAAIL recruiter portfolio](https://github.com/Saehon/Saeid-Homayoun/pull/197) | Pending review; external code ownership and private research boundaries are documented |
+
+The project PRs are **not yet merged**. Use their **Files changed** and **Checks** tabs to verify implementation and CI at the latest commit. Do not infer employer affiliation, production use, or real-model quality from synthetic passing tests.
+
+---
 
 > **Independent research project.** References to the IFRS Foundation, PCAOB, IAASB, ISSB, ESRS, COSO, Google, Microsoft, OpenAI, audit firms, or other organizations identify standards, public research, technologies, or comparison targets only. They do not imply affiliation, endorsement, certification, sponsorship, or regulatory approval.
 
