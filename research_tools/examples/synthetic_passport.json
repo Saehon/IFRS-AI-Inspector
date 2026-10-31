@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "case_class": "synthetic",
+  "assertion_id": "SYN-INVENTORY-VALUATION-001",
+  "account": "inventory",
+  "assertion_type": "valuation",
+  "claim": "Synthetic ending inventory is presented at 100 units despite count 98.",
+  "prepared_by": "synthetic_preparer_A",
+  "reporting_date": "2025-12-31",
+  "supports_claim_with": [
+    "SYN-SOURCE-COUNT-001"
+  ],
+  "unresolved_contradictions": [
+    "Inventory count differs from synthetic ledger and requires reconciliation."
+  ],
+  "reviewer": null,
+  "evidence": [
+    {
+      "evidence_id": "SYN-SOURCE-COUNT-001",
+      "file": "inventory_evidence.txt",
+      "sha256": "3842185d3117c783c109ae8a13d21cb079348d111d10adae87f391be05467b1c",
+      "source_rights": "original_synthetic_data",
+      "effective_as_of": "2025-12-31",
+      "captured_at_utc": "2026-01-10T09:00:00Z"
+    }
+  ]
+}
